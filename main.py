@@ -14,8 +14,9 @@ response = requests.get(request_url)
 if response.status_code == 200:
     data =response.json()
     print(data)
-    weather_describtion = data["weather"][0]["describtion"]
+    weather_describtion = data["weather"][0]["description"]
     print(weather_describtion)
-    temperature = data["main"]["temp"]-273.15
+    temperature = round(data["main"]["temp"]-273.15)
+    print(temperature)
 else:
     print("Fehler")
