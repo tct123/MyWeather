@@ -11,3 +11,8 @@ request_url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={l
 
 response = requests.get(request_url)
 
+if response.status_code == 200:
+    data =response.json()
+    print(data)
+else:
+    print("Fehler")
