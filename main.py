@@ -16,7 +16,11 @@ if response.status_code == 200:
     print(data)
     weather_describtion = data["weather"][0]["description"]
     print(weather_describtion)
-    temperature = round(data["main"]["temp"]-273.15)
+    setgraddegree = "Grad"
+    if setgraddegree == "Grad":
+        temperature = round(data["main"]["temp"]-273.15)
+    if setgraddegree == "Fahrenheit":
+        temperature = round(data["main"]["temp"])
     print(temperature)
 else:
     print("Fehler")
