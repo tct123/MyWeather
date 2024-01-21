@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 
 # API_Key = "f3cd11432dabdb4ccae3c0a1347c07a1"
 #
@@ -15,10 +16,9 @@ class MyWeather:
         self.lat = lat
         self.lon = lon
         self.setgraddegree = setgraddegree
-        self.request_url = f"https://api.openweathermap.org/data/2.5/weather?lat={self.lat}&lon={self.lon}&appid={self.api_key}"
-        self.response = self.requests.get(self.request_url)
-        self.data = self.response.json()
-        # print(data)
+        request_url = f"https://api.openweathermap.org/data/2.5/weather?lat={self.lat}&lon={self.lon}&appid={self.api_key}"
+        response = requests.get(request_url)
+        self.data = response.json()
 
     def description(self):
         weather_describtion = self.data["weather"][0]["description"]
@@ -30,3 +30,13 @@ class MyWeather:
         if self.setgraddegree == "Fahrenheit":
             temperature = round(self.data["main"]["temp"])
         return temperature
+
+
+if __name__ == "__main__":
+    api_key = os.getenv("OPENWEATHER_DEV_API")
+    print(api_key)
+    lat = 34
+    lon = lat
+    weather = MyWeather(api_key=api_key, lat=lat, lon=lon, setgraddegree="Grad")
+    print(weather.description())
+    print(weather.degreefunc())
