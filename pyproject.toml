@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "myweather"
-version = "0.1.0"
+version = "0.2.0"
 description = "An openweathermap wrapper"
 authors = ["tct123 <42028373+tct123@users.noreply.github.com>"]
 license = "MIT"
