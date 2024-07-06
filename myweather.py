@@ -2,6 +2,7 @@ import requests
 import json
 import os
 
+
 class MyWeather:
     def __init__(self, api_key, lat, lon, setgraddegree):
         self.api_key = api_key
