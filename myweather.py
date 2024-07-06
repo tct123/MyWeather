@@ -2,14 +2,6 @@ import requests
 import json
 import os
 
-# API_Key = "f3cd11432dabdb4ccae3c0a1347c07a1"
-#
-# print("Breitengrad:")
-# lat = input()
-# print("Längengrad:")
-# lon = input()
-
-
 class MyWeather:
     def __init__(self, api_key, lat, lon, setgraddegree):
         self.api_key = api_key
