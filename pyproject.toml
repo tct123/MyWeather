@@ -5,16 +5,15 @@ description = "An openweathermap wrapper"
 authors = ["tct123 <42028373+tct123@users.noreply.github.com>"]
 license = "MIT"
 readme = "README.md"
+repository = "https://github.com/tct123/MyWeather"
 
 [tool.poetry.dependencies]
-python = "^3.8"
-requests = "^2.31.0"
+python = "^3.10"
+requests = "^2.32.3"
 
+[tool.poetry.group.dev.dependencies]
+requests = "^2.32.3"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[project]
-#...
-urls = { "Website" = "https://github.com/tct123/MyWeather" }
