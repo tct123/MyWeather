@@ -1,6 +1,6 @@
 [project]
 name = "myweather"
-version = "0.6.0"
+version = "0.7.0"
 description = "An openweathermap wrapper"
 authors = [
     { name = "tct123", email = "42028373+tct123@users.noreply.github.com" },
@@ -9,7 +9,7 @@ keywords = ["openweather", "weather", "wrapper"]
 classifiers = ["Topic :: Software Development :: Libraries :: Python Modules"]
 license = "MIT"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.14"
 dependencies = ["requests"]
 
 [project.urls]
